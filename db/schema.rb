@@ -54,3 +54,4 @@ ActiveRecord::Schema.define(version: 2018_11_26_164443) do
   add_foreign_key "bookings", "users"
   add_foreign_key "dogs", "users"
 end
+

@@ -1,2 +1,11 @@
 <h1>Bookings#index</h1>
 <p>Find me in app/views/bookings/index.html.erb</p>
+
+<% @bookings.each do |booking| %>  <h2></h2>
+  <p>Renter: <%= booking.renter.name %></p>
+  <p>Owner: <%= booking.owner.name %></p>
+  <p>Dog's breed: <%= boooking.dog.breed %></p>
+  <p>Start_date: <%= booking.start_date %></p>
+  <p>End_date: <%= booking.end_date %></p>
+  <p>Total price: <%=  %></p>
+  <% end %>

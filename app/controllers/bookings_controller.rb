@@ -10,10 +10,10 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    # we need `restaurant_id` to asssociate review with corresponding restaurant
+
     @booking.dog = Dog.find(params[:dog_id])
-    @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_dates)
-    @booking.user = current_user
+    @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
+    @booking.renter = current_user
     @booking.save
   end
 

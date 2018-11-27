@@ -3,21 +3,22 @@ class DogsController < ApplicationController
   before_action :find_dog, only: [:show, :edit]
 
   def index
-    @dogs = Dog.all
+    @dogs = policy_scope(Dog)
   end
 
   def show
-
+    @post = policy_scope(Dog).find(params[:id])
+    # post = Post.find(params[:id])
   end
 
   def new
     @dog = Dog.new
+    authorize @dog
   end
 
   def create
-    #raise
-    #@dog = Dog.new(dog_params)
     @dog = Dog.new(dog_params)
+    authorize @dog
     @dog.user = current_user
     if @dog.save
       redirect_to dogs_path
@@ -30,9 +31,17 @@ class DogsController < ApplicationController
   end
 
   def update
+    @dog = Dog.find(params[:id])
+    authorize @dog
+    if @dog.update(dog_params)
+      redirect_to @dog
+    else
+      render :edit
+    end
   end
 
   def destroy
+
   end
 
   private
@@ -43,5 +52,6 @@ class DogsController < ApplicationController
 
   def find_dog
     @dog = Dog.find(params[:id])
+    authorize @dog
   end
 end

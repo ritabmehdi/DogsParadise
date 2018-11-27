@@ -1,24 +1,29 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
   end
 
   def new
     @dog = Dog.find(params[:dog_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
-
-    @booking.dog = Dog.find(params[:dog_id])
+    authorize @booking
+    @dog =  Dog.find(params[:dog_id])
+    @booking.dog = @dog
     @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
-    @booking.renter = current_user
+    @booking.user = current_user
+    @booking. = @dog.user
     @booking.save
+    raise
   end
 
   def edit
     @booking = Booking.find(params[:booking_id])
+    authorize @booking
   end
 
   def update
@@ -30,6 +35,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :user, :renter, :total_price)
   end
 end

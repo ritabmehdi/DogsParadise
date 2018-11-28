@@ -12,13 +12,11 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     authorize @booking
-    @dog =  Dog.find(params[:dog_id])
+    @dog = Dog.find(params[:dog_id])
     @booking.dog = @dog
     @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
     @booking.user = current_user
-    @booking = @dog.user
     @booking.save
-    raise
   end
 
   def edit
@@ -35,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :user, :renter, :total_price)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end

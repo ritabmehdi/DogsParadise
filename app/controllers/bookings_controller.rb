@@ -9,6 +9,11 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+  def show
+    @post = policy_scope(Booking).find(params[:id])
+    # post = Post.find(params[:id])
+  end
+
   def create
     @booking = Booking.new(booking_params)
     authorize @booking

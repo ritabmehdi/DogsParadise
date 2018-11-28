@@ -4,6 +4,7 @@
 <% if !@dogs.empty? %>
     <% @dogs.each do |dog| %>
       <div>
+        <p>ID: <%= dog.id %> </p>
         <p>breed: <%= dog.breed %> </p>
         <p>skill: <%= dog.skill %> </p>
         <p>age: <%= dog.age %> </p>

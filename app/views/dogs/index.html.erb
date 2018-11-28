@@ -1,16 +1,37 @@
-<h1>Dogs#index</h1>
-<p>Find me in app/views/dogs/index.html.erb</p>
+<div class="container mt-3">
 
-<% if !@dogs.empty? %>
+  <div class="row">
+    <div class="col-12">
+      <h1>All our Dogs</h1>
+    </div>
+  </div>
+
+  <div class="row">
     <% @dogs.each do |dog| %>
-      <div>
-        <p>ID: <%= dog.id %> </p>
-        <p>breed: <%= dog.breed %> </p>
-        <p>skill: <%= dog.skill %> </p>
-        <p>age: <%= dog.age %> </p>
-        <p>fee: <%= dog.fee %> </p>
+      <div class="col-xs-4">
+        <div class="dog-card">
+          <div class="dog-card-image" style="background-image: url('<%= dog.picture_url %>')"></div>
+          <div class="dog-card-content">
+            <div class="dog-card-title">
+              <h4><%= dog.breed %></h4>
+            </div>
+            <p><%= dog.skill %></p>
+            <div class="flex">
+              <div class="flex">
+                <i class="material-icons mr-1">pets</i><span><%= dog.breed %></span>
+              </div>
+              <div class="flex ml-3">
+                <i class="material-icons mr-2">euro_symbol</i> <%= dog.fee %>
+              </div>
+            </div>
+          </div>
+          <div class="dog-card-actions">
+            <%= link_to 'More info', dog_path(dog) %>
+            <a href="#" class="ml-3 text-warning">Edit</a>
+            <a href="#" class="ml-3 text-danger">Remove</a>
+          </div>
+        </div>
       </div>
     <% end %>
-<% else %>
-  <h3> Dogs arrays is empty </h3>
-<% end %>
+  </div>
+</div>

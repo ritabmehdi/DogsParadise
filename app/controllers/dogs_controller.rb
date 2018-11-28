@@ -7,7 +7,7 @@ class DogsController < ApplicationController
   end
 
   def show
-    @post = policy_scope(Dog).find(params[:id])
+    @dogs = policy_scope(Dog).find(params[:id])
     # post = Post.find(params[:id])
   end
 

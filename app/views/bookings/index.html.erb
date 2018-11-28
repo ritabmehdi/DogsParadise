@@ -2,10 +2,9 @@
 <p>Find me in app/views/bookings/index.html.erb</p>
 
 <% @bookings.each do |booking| %>  <h2></h2>
-  <p>Renter: <%= booking.renter.name %></p>
-  <p>Owner: <%= booking.owner.name %></p>
-  <p>Dog's breed: <%= boooking.dog.breed %></p>
+  <p>Renter: <%= booking.user.email %></p>
+  <p>Owner: <%= booking.dog.user.email %></p>
   <p>Start_date: <%= booking.start_date %></p>
   <p>End_date: <%= booking.end_date %></p>
-  <p>Total price: <%=  %></p>
+  <p>Total price: $<%= booking.total_price %> </p>
   <% end %>

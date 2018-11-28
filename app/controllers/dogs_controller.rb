@@ -1,13 +1,13 @@
 class DogsController < ApplicationController
 
-  before_action :find_dog, only: [:show, :edit]
+  before_action :find_dog, only: [:show, :edit, :update, :destroy]
 
   def index
     @dogs = policy_scope(Dog)
   end
 
   def show
-    @post = policy_scope(Dog).find(params[:id])
+    @dogs = policy_scope(Dog).find(params[:id])
     # post = Post.find(params[:id])
      @booking = Booking.new
   end
@@ -33,7 +33,7 @@ class DogsController < ApplicationController
   end
 
   def update
-    @dog = Dog.find(params[:id])
+    #@dog = Dog.find(params[:id])
     authorize @dog
     if @dog.update(dog_params)
       redirect_to @dog

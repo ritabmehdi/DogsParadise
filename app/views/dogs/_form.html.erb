@@ -1,0 +1,18 @@
+<%= form_for @dog do |f| %>
+  <div class="form-group">
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+  </div>
+  <div>
+  <%= f.label :skill %>
+  <%= f.text_field :skill %>
+  </div>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  </div>
+  </div>
+  <%= f.label :fee %>
+  <%= f.text_field :fee %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>

@@ -9,6 +9,11 @@ class BookingsController < ApplicationController
     authorize @booking
   end
 
+  def show
+    @post = policy_scope(Booking).find(params[:id])
+    # post = Post.find(params[:id])
+  end
+
   def create
     @booking = Booking.new(booking_params)
     authorize @booking
@@ -16,18 +21,43 @@ class BookingsController < ApplicationController
     @booking.dog = @dog
     @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
     @booking.user = current_user
-    @booking.save
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new
+    end
   end
 
   def edit
-    @booking = Booking.find(params[:booking_id])
+    @booking = Booking.find(params[:id])
     authorize @booking
   end
 
   def update
+    #raise
+    @booking = Booking.find(params[:id])
+    @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking)
+    else
+      render :edit
+    end
+  end
+
+  def show
+    @booking = policy_scope(Booking).find(params[:id])
+    authorize @booking
   end
 
   def destroy
+    @booking = policy_scope(Booking).find(params[:id])
+    authorize @booking
+    if @booking.destroy
+      redirect_to bookings_path
+    else
+      render :index
+    end
   end
 
   private

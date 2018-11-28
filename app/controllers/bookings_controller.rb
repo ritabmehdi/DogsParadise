@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     @booking.dog = @dog
     @booking.total_price = @booking.dog.fee * (@booking.end_date - @booking.start_date)
     @booking.user = current_user
-    @booking. = @dog.user
+    @booking = @dog.user
     @booking.save
     raise
   end

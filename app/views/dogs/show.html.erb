@@ -1,12 +1,22 @@
-<h1>Dogs#show</h1>
-<p>Find me in app/views/dogs/show.html.erb</p>
 
-<table>
-  <tr>
-    <td><p>Id: <%= @dog.id %> </p> </td>
-    <td><p>breed: <%= @dog.breed %> </p></td>
-    <td><p>skill: <%= @dog.skill %> </p></td>
-    <td><p>age: <%= @dog.age %> </p> </td>
-    <td><p>fee: <%= @dog.fee %> </p> </td>
-  </tr>
-</table>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.2) 0%, rgba(0,0,0,0.2) 50%), url('https://images.unsplash.com/photo-1455380579765-810023662ea2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c588e711c7511c30d1b9341cfdc6691d&auto=format&fit=crop&w=1950&q=80');">
+</div>
+<div class="container" id="show">
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=71d59cd22de21da8d2939bc203617983&auto=format&fit=crop&w=960&q=80" alt="pug face" width="200px">
+      </div>
+      <div class="col-xs-12 col-md-3">
+          <div class="details">
+            <h4>Details</h4>
+            <p><strong>Breed:</strong> <%= @dog.breed %></p>
+            <p><strong>Skill:</strong> <%= @dog.skill %></p>
+            <p><strong>Age:</strong> <%= @dog.age %></p>
+            <p><strong>Fee:</strong> $ <%= @dog.fee %></p>
+          </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= render 'bookings/form', booking: [@dog, @booking] %>
+      </div>
+    </div>
+</div>

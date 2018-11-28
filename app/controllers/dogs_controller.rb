@@ -9,11 +9,13 @@ class DogsController < ApplicationController
   def show
     @post = policy_scope(Dog).find(params[:id])
     # post = Post.find(params[:id])
+     @booking = Booking.new
   end
 
   def new
     @dog = Dog.new
     authorize @dog
+
   end
 
   def create

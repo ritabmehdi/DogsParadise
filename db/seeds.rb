@@ -11,7 +11,7 @@ dogs_attributes = [
     breed: 'German',
     skill: 'Precision',
     age: '3',
-    picture_url: 'https://static.boredpanda.com/blog/wp-content/uploads/2016/09/dogs-catching-treats-fotos-frei-schnauze-christian-vieler-4-57e8d08f5fc8f__880.jpg',
+    photo: 'https://static.boredpanda.com/blog/wp-content/uploads/2016/09/dogs-catching-treats-fotos-frei-schnauze-christian-vieler-4-57e8d08f5fc8f__880.jpg',
     fee: 75,
     user_id: 1
   },
@@ -19,7 +19,7 @@ dogs_attributes = [
     breed: 'Scottish',
     skill: 'Shepherd',
     age: '9',
-    picture_url: 'https://mymodernmet.com/wp/wp-content/uploads/archive/1n0cbjdfP4QRl3XNofuI_DogsCatchingTreats18.jpg',
+    photo: 'https://mymodernmet.com/wp/wp-content/uploads/archive/1n0cbjdfP4QRl3XNofuI_DogsCatchingTreats18.jpg',
     fee: 75,
     user_id: 1
   },
@@ -27,7 +27,7 @@ dogs_attributes = [
     breed: 'Spanish',
     skill: 'Lazy',
     age: '2',
-    picture_url: 'https://www.dogster.com/wp-content/uploads/2016/04/treats-hh.jpg',
+    photo: 'https://www.dogster.com/wp-content/uploads/2016/04/treats-hh.jpg',
     fee: 75,
     user_id: 1
   },
@@ -35,7 +35,7 @@ dogs_attributes = [
     breed: 'Golden',
     skill: 'Eating',
     age: '8',
-    picture_url: 'https://cdn.shopify.com/s/files/1/0889/9628/articles/RusjHrS_1200x.jpg?v=1451402669',
+    photo: 'https://cdn.shopify.com/s/files/1/0889/9628/articles/RusjHrS_1200x.jpg?v=1451402669',
     fee: 75,
     user_id: 1
   },
@@ -43,7 +43,7 @@ dogs_attributes = [
     breed: 'Pitweiller',
     skill: 'Guard',
     age: '1',
-    picture_url: 'https://woofposts.com/wp-content/uploads/2017/04/dogs-catching-treats-fotos-frei-schnauze-christian-vieler-11-57e8d09ed56c5__880.jpg',
+    photo: 'https://woofposts.com/wp-content/uploads/2017/04/dogs-catching-treats-fotos-frei-schnauze-christian-vieler-11-57e8d09ed56c5__880.jpg',
     fee: 75,
     user_id: 1
   },
@@ -51,7 +51,7 @@ dogs_attributes = [
     breed: 'Terrier',
     skill: 'Schmooze',
     age: '3',
-    picture_url: 'https://images-na.ssl-images-amazon.com/images/I/91HXb1H%2B69L.jpg',
+    photo: 'https://images-na.ssl-images-amazon.com/images/I/91HXb1H%2B69L.jpg',
     fee: 75,
     user_id: 1
   },
@@ -59,7 +59,7 @@ dogs_attributes = [
     breed: 'Floof',
     skill: 'Great cook',
     age: '4',
-    picture_url: 'https://www.pfalz-express.de/wp-content/uploads/2017/11/Bitte-hecheln-1.jpg',
+    photo: 'https://www.pfalz-express.de/wp-content/uploads/2017/11/Bitte-hecheln-1.jpg',
     fee: 75,
     user_id: 1
   },
@@ -67,7 +67,7 @@ dogs_attributes = [
     breed: 'Italian Mastiff',
     skill: 'Big',
     age: '8',
-    picture_url: 'https://pbs.twimg.com/media/Dj6qojHVAAAGMou.jpg',
+    photo: 'https://pbs.twimg.com/media/Dj6qojHVAAAGMou.jpg',
     fee: 75,
     user_id: 1
   },
@@ -75,7 +75,7 @@ dogs_attributes = [
     breed: 'French',
     skill: 'Great cook',
     age: '4',
-    picture_url: 'https://blazepress.com/.image/t_share/MTQxODM1MDE4MTI0MTQyMDg5/funny-photos-of-dogs-catching-treats-2jpg.jpg',
+    photo: 'https://blazepress.com/.image/t_share/MTQxODM1MDE4MTI0MTQyMDg5/funny-photos-of-dogs-catching-treats-2jpg.jpg',
     fee: 75,
     user_id: 1
   }

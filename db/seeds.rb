@@ -32,8 +32,8 @@ dogs_attributes = [
     user_id: 1
   },
   {
-    breed: 'Greyhound',
-    skill: 'runner',
+    breed: 'Golden',
+    skill: 'Eating',
     age: '8',
     picture_url: 'https://cdn.shopify.com/s/files/1/0889/9628/articles/RusjHrS_1200x.jpg?v=1451402669',
     fee: 75,
@@ -48,18 +48,18 @@ dogs_attributes = [
     user_id: 1
   },
   {
-    breed: 'Shepherd',
-    skill: '10 Clifton Gardens London W9 1DT',
+    breed: 'Terrier',
+    skill: 'Schmooze',
     age: '3',
-    picture_url: 'https://i.pinimg.com/originals/d9/55/46/d955469e5c16631753b2a7f03f1c6ab1.jpg',
+    picture_url: 'https://images-na.ssl-images-amazon.com/images/I/91HXb1H%2B69L.jpg',
     fee: 75,
     user_id: 1
   },
   {
-    breed: 'French',
+    breed: 'Floof',
     skill: 'Great cook',
     age: '4',
-    picture_url: 'https://i.dailymail.co.uk/i/pix/2017/09/26/19/44BCB84E00000578-4922624-poodle-a-51_1506451084505.jpg',
+    picture_url: 'https://www.pfalz-express.de/wp-content/uploads/2017/11/Bitte-hecheln-1.jpg',
     fee: 75,
     user_id: 1
   },

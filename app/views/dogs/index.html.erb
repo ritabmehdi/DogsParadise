@@ -10,7 +10,10 @@
     <% @dogs.each do |dog| %>
       <div class="col-xs-4">
         <div class="dog-card">
+
+          
           <div class="dog-card-image" style="background-image: url('<%= dog.photo %>')"></div>
+
           <div class="dog-card-content">
             <div class="dog-card-title">
               <h4><%= dog.breed %></h4>

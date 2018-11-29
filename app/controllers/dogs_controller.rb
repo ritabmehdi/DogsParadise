@@ -4,6 +4,7 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog)
+    raise
   end
 
   def show

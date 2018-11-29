@@ -18,3 +18,45 @@
       </div>
     </div>
 </div>
+
+
+<h1>Your booking</h1>
+<div class="card-booking">
+
+    <div class="row-ref">
+      <h3>Ref: <%= @booking.bookin_ref %></h3>
+      <p>Your booking is: confirmed</p>
+    </div>
+    <div class="row-period">
+      <p><strong>Start Date: <%= @booking.start_date %></p></strong>
+      <p><strong>End Date: <%= @booking.start_date %></p></strong>
+      <div class="col-sm-4"><h3>Amount: <%= @booking.total_price %></h3></div>
+    </div>
+    <div class="row-status">
+
+      <div class="col-sm-4"><h3>Amount: <%= @booking.total_price %></h3></div>
+      <p class="status pending">Your booking is: confirmed</p>
+      <p class="price">Amount: <%= @booking.total_price %></p>
+    </div>
+
+</div>
+
+
+<div class="message">
+  <img class="avatar-large" src="https://kitt.lewagon.com/placeholder/users/gabriel-dehan">
+  <div class="message-name">
+    <h3>Gab Dehan</h3>
+    <p>10/07/17</p>
+  </div>
+  <div class="message-body">
+    <p><strong>I am not sure yet!</strong></p>
+    <p>
+      I am not sure yet! I might be in Shanghai at this moment... Can I tell you later?
+    </p>
+  </div>
+  <div class="message-status">
+    <p class="status pending">Pending</p>
+    <p class="price">€345</p>
+  </div>
+</div>
+

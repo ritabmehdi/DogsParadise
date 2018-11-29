@@ -3,3 +3,18 @@
     <h1>Booking Successful!</h1>
   </div>
 </div>
+<div class="col-sm-12">
+    <div class="card-booking">
+      <div class="col-sm-12"><h1>Your booking</h1>
+        <div class="row">
+          <div class="col-sm-6"><h3>Ref: <%= @booking.bookin_ref %></h3></div>
+          <div class="col-sm-6"><h3>Your booking is: confirmed</h3></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"><h3>Start Date: <%= @booking.start_date %></h3></div>
+          <div class="col-sm-4"><h3>End Date: <%= @booking.start_date %></h3></div>
+          <div class="col-sm-4"><h3>Amount: <%= @booking.total_price %></h3></div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,14 +1,15 @@
 <h1>Dogs#new</h1>
 <p>Find me in app/views/dogs/new.html.erb</p>
 
-
-
-
 <%= simple_form_for @dog do |f| %>
+  <%= f.input :name %>
   <%= f.input :breed %>
   <%= f.input :skill %>
   <%= f.input :age %>
+  <%= f.input :description %>
   <%= f.input :fee %>
+  <%= f.input :picture_url %>
+  <%#= f.input :photo_cache, as: :hidden %>
 
   <%= f.submit "add a dog", class: "btn btn-primary" %>
 <% end %>

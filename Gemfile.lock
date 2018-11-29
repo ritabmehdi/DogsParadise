@@ -205,9 +205,13 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+
+    validates_overlap (0.8.6)
+      rails (>= 3.0.0)
+
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.5)
+
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -249,6 +253,7 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   uglifier
+  validates_overlap
   web-console (>= 3.3.0)
   webpacker
 

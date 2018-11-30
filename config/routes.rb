@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [ :index, :edit, :update, :destroy, :show ]
-
+  get "/confirmation" => "pages#confirmation"
 end

@@ -8,7 +8,7 @@
 
 dogs_attributes = [
   {
-    name: 'Bruno'
+    name: 'Bruno',
     breed: 'German',
     skill: 'Precision',
     age: '3',

@@ -24,3 +24,35 @@
 #confirmation {
   height: 50vh;
 }
+
+
+.banner-home {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-start {
+  color: white;
+  padding: 25px 35px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 20px;
+  background: #0d6988;
+  transition: background 0.3s ease;
+}
+.btn-treehouse:hover {
+  opacity: 1;
+  background: #3ac162;
+  text-decoration: none;
+  color: white;
+}
+
+.margin-top {
+  margin-top: 50px;
+}

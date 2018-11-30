@@ -1,15 +1,25 @@
-<h1>Dogs#new</h1>
-<p>Find me in app/views/dogs/new.html.erb</p>
+<div class="background-login" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.5) 0%, rgba(0,0,0,0.5) 50%), url('https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-0.3.5&s=1659dad471e4f35755d79b82e6df6f6d&auto=format&fit=crop&w=1050&q=800');">
 
-<%= simple_form_for @dog do |f| %>
-  <%= f.input :name %>
-  <%= f.input :breed %>
-  <%= f.input :skill %>
-  <%= f.input :age %>
-  <%= f.input :description %>
-  <%= f.input :fee %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
 
-  <%= f.submit "add a dog", class: "btn btn-primary" %>
-<% end %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-3 col-sm-6">
+        <h1>New dog</h1>
+
+
+        <%= simple_form_for @dog do |f| %>
+          <%= f.input :name %>
+          <%= f.input :breed %>
+          <%= f.input :skill %>
+          <%= f.input :age %>
+          <%= f.input :description %>
+          <%= f.input :fee %>
+          <%= f.input :photo %>
+          <%= f.input :photo_cache, as: :hidden %>
+
+          <%= f.submit "add a dog", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

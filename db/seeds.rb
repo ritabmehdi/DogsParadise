@@ -8,7 +8,7 @@
 
 dogs_attributes = [
   {
-    name: 'Bruno'
+    name: 'Bruno',
     breed: 'German',
     skill: 'Precision',
     age: '3',
@@ -88,7 +88,7 @@ dogs_attributes = [
     description: 'Spicy jalapeno bacon ipsum dolor amet turducken elit ad, ham exercitation anim aliqua do pork belly ut pig laboris fugiat ea. Short loin pariatur capicola ad shank deserunt. Consectetur pig bacon velit minim, esse cow andouille labore occaecat frankfurter ullamco reprehenderit flank ex. Ham ad beef ribs culpa prosciutto cillum. Aliquip ribeye anim dolor tail porchetta short ribs excepteur drumstick leberkas mollit in pork loin venison.'
   },
   {
-    name: 'Frou Frou'
+    name: 'Frou Frou',
     breed: 'French',
     skill: 'Great cook',
     age: '4',

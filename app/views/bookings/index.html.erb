@@ -2,24 +2,26 @@
   <h1>Bookings</h1><br>
   <div class="row">
     <% @bookings.each do |booking| %>
-      <div class="col-xs-4">
-        <div class="booking-card">
-          <div class="booking-card-image" style="background-image: url( <%= booking.dog.photo %> )"></div>
-          <div class="booking-card-content">
-            <div class="booking-card-title">
-              <h4><%= booking.dog.name %></h4>
+      <% if booking.user == current_user %>
+          <div class="col-xs-4">
+            <div class="booking-card">
+              <div class="booking-card-image" style="background-image: url( <%= booking.dog.photo %> )"></div>
+              <div class="booking-card-content">
+                <div class="booking-card-title">
+                  <h4><%= booking.dog.name %></h4>
+                </div>
+                <p>Renter: <%= booking.user.email %></p>
+                <p>Owner: <%= booking.dog.user.email %></p>
+                <p>Start_date: <%= booking.start_date %></p>
+                <p>End_date: <%= booking.end_date %></p>
+                <p>Total price: $<%= booking.total_price %> </p>
+                <%= link_to "Delete", booking_path(booking),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+              </div>
             </div>
-            <p>Renter: <%= booking.user.email %></p>
-            <p>Owner: <%= booking.dog.user.email %></p>
-            <p>Start_date: <%= booking.start_date %></p>
-            <p>End_date: <%= booking.end_date %></p>
-            <p>Total price: $<%= booking.total_price %> </p>
-            <%= link_to "Delete", booking_path(booking),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
           </div>
-        </div>
-      </div>
+        <% end %>
     <% end %>
   </div>
 </div>

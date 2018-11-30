@@ -1,18 +1,30 @@
-<%= form_for @dog do |f| %>
-  <div class="form-group">
-    <%= f.label :breed %>
-    <%= f.text_field :breed %>
+
+<div class="background-login" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.5) 0%, rgba(0,0,0,0.5) 50%), url('https://images.unsplash.com/photo-1503256207526-0d5d80fa2f47?ixlib=rb-0.3.5&s=011eedd288b1e5b1b5e02c3619ad3b1f&auto=format&fit=crop&w=633&q=80');">
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <h1>Edit your dog</h1>
+      <%= form_for @dog do |f| %>
+        <div class="form-group">
+          <%= f.label :breed %>
+          <%= f.text_field :breed %>
+        </div>
+        <div>
+        <%= f.label :skill %>
+        <%= f.text_field :skill %>
+        </div>
+        <div>
+        <%= f.label :age %>
+        <%= f.text_field :age %>
+        </div>
+        <div>
+        <%= f.label :fee %>
+        <%= f.text_field :fee %>
+        </div>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
   </div>
-  <div>
-  <%= f.label :skill %>
-  <%= f.text_field :skill %>
-  </div>
-  <%= f.label :age %>
-  <%= f.text_field :age %>
-  </div>
-  </div>
-  <%= f.label :fee %>
-  <%= f.text_field :fee %>
-  </div>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+</div>
+

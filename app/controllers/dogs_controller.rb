@@ -30,6 +30,7 @@ class DogsController < ApplicationController
   end
 
   def edit
+    #raise
   end
 
   def update

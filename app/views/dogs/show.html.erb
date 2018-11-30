@@ -4,7 +4,8 @@
 <div class="container" id="show">
     <div class="row">
       <div class="col-xs-12 col-md-3">
-        <%= cl_image_tag("imw4eej1ah5ckuv3lyn7", width: 200, crop: :fill) %>
+
+        <%= cl_image_tag(@dog.photo, width: 200, crop: :fill) %>
       </div>
       <div class="col-xs-12 col-md-3">
           <div class="details">

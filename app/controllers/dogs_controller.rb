@@ -4,7 +4,7 @@ class DogsController < ApplicationController
 
   def index
     @dogs = policy_scope(Dog)
-    raise
+    #raise
   end
 
   def show
@@ -44,7 +44,11 @@ class DogsController < ApplicationController
   end
 
   def destroy
-
+    if @dog.destroy
+      redirect_to dogs_path
+    else
+      render :index
+    end
   end
 
   private

@@ -21,8 +21,14 @@
                     </div>
                     <div class="dog-card-actions">
                         <%= link_to 'Details', dog_path(dog) %>
-                        <%= link_to 'Edit', dog_path(dog) %>
-                        <%= link_to 'Remove', dog_path(dog) %>
+                        <% if dog.user == current_user %>
+                            <%= link_to 'Edit', edit_dog_path(dog), :class => "ml-3 text-warning" %>
+                            <!--<a href="#" class="ml-3 text-danger">Remove</a>-->
+                            <%= link_to 'Remove', dog_path(dog),
+                                       method: :delete,
+                                       data: { confirm: 'Are you sure?' },
+                                       :class => "ml-3 text-danger" %>
+                          <% end %>
                     </div>
                 </div>
             </div>

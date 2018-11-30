@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-3">
+
         <%= cl_image_tag( @dog.photo , width: 200, height: 250, crop: :fill) %>
         <h4><%= @dog.name %></h4>
         <p><strong>Breed:</strong> <%= @dog.breed %></p>

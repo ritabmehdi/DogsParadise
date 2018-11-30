@@ -43,7 +43,11 @@ class DogsController < ApplicationController
   end
 
   def destroy
-
+    if @dog.destroy
+      redirect_to dogs_path
+    else
+      render :index
+    end
   end
 
   private

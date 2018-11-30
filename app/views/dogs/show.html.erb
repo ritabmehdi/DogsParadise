@@ -1,22 +1,27 @@
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(50,50,50,0.2) 0%, rgba(0,0,0,0.2) 50%), url(<%= cl_image_path("kkurykkdkiltps7kufxp") %>);">
+<div class="banner" style="background-image: url(<%= cl_image_path("t0qq1e82yio16f29rscl") %>);">
 </div>
-<div class="container" id="show">
+<div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-3">
-        <%= cl_image_tag("imw4eej1ah5ckuv3lyn7", width: 200, crop: :fill) %>
+        <%= cl_image_tag( @dog.photo , width: 200, height: 250, crop: :fill) %>
+        <h4><%= @dog.name %></h4>
+        <p><strong>Breed:</strong> <%= @dog.breed %></p>
+        <p><strong>Skill:</strong> <%= @dog.skill %></p>
+        <p><strong>Age:</strong> <%= @dog.age %></p>
       </div>
       <div class="col-xs-12 col-md-3">
           <div class="details">
-            <h4>Details</h4>
-            <p><strong>Breed:</strong> <%= @dog.breed %></p>
-            <p><strong>Skill:</strong> <%= @dog.skill %></p>
-            <p><strong>Age:</strong> <%= @dog.age %></p>
-            <p><strong>Fee:</strong> $ <%= @dog.fee %></p>
+            <p><strong>Details:</strong><br> <%= @dog.description %></p>
           </div>
       </div>
       <div class="col-xs-12 col-md-6">
+        <h4>Adopt <%= @dog.name %></h4>
+        <br>
         <%= render 'bookings/form', booking: [@dog, @booking] %>
+        <br>
+        <br>
+        <p><strong>Fee:</strong> $ <%= @dog.fee %> per week</p>
       </div>
     </div>
 </div>

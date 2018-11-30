@@ -34,6 +34,20 @@
   padding: 16px 24px;
 }
 
+.dog-card-actions a {
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, .5);
+  font-size: 16px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #1B998B;
+}
+
 .dog-form {
   background-color: #F8F9FA;
   padding: 24px;
@@ -65,5 +79,13 @@
   font-weight: 300;
   font-size: 20px;
   color: #333;
+}
+
+.flex p {
+  word-spacing: 5px;
+}
+
+.wrap {
+  margin-top: 30px;
 }
 

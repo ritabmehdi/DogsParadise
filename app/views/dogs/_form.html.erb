@@ -4,23 +4,22 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-offset-3 col-sm-6">
-      <h1>Edit your dog</h1>
-      <%= form_for @dog do |f| %>
+      <%= simple_form_for @dog do |f| %>
         <div class="form-group">
-          <%= f.label :breed %>
-          <%= f.text_field :breed %>
+          <%= f.input :breed %>
+
         </div>
         <div>
-        <%= f.label :skill %>
-        <%= f.text_field :skill %>
+        <%= f.input :skill %>
+
         </div>
         <div>
-        <%= f.label :age %>
-        <%= f.text_field :age %>
+        <%= f.input :age %>
+
         </div>
         <div>
-        <%= f.label :fee %>
-        <%= f.text_field :fee %>
+        <%= f.input :fee %>
+
         </div>
         <%= f.submit class: 'btn btn-primary' %>
       <% end %>
